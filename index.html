@@ -13,6 +13,126 @@
     </script>
   </head>
   <body>
+        <table>
+      <tr>
+        <th>Gyournal</th>
+      </tr>
+      <tr>
+        <td>
+# Gyournal
+
+## Overview
+
+Gyournal is a local-first, single-user workout journaling mobile application built with React Native and Expo. The app allows users to log workouts, track exercises by body part, view workout history on a calendar, and monitor fitness statistics and streaks. All data is stored locally on the device - no cloud storage or APIs required.
+
+## User Preferences
+
+Preferred communication style: Simple, everyday language.
+
+## Recent Changes
+
+- **January 2026:** Initial MVP implementation
+  - Calendar view with workout indicators (purple for strength, orange for cardio)
+  - Exercise library organized by 7 body parts (Chest, Back, Legs, Arms, Shoulders, Core, Cardio)
+  - Stats screen with streak tracking and workout summaries
+  - Profile screen with avatar selection and unit preferences (lbs/kg, mi/km)
+  - Full CRUD for workout logging with strength and cardio exercise support
+
+## System Architecture
+
+### Frontend Architecture
+
+**Framework:** React Native with Expo SDK 54
+- Uses the new React Native architecture with React 19
+- Implements React Compiler via Expo experiments
+- File-based module structure under `client/` directory
+
+**Navigation:** React Navigation v7
+- Bottom tab navigator with 4 tabs: Calendar, Exercises, Stats, Profile
+- Native stack navigator for modal screens (Log Workout, Workout Detail)
+- Floating action button pattern for workout logging (visible on Calendar and Stats tabs)
+
+**State Management:**
+- Local component state with React hooks
+- useFocusEffect for refreshing data when screens come into focus
+- AsyncStorage for persistent local data storage
+
+**UI Components:**
+- Custom themed components (ThemedText, ThemedView, Card, Button)
+- Expo vector icons (Feather icon set)
+- React Native Reanimated for animations
+- Expo Blur for iOS glassmorphism effects
+- Keyboard-aware scroll views for form screens
+
+**Styling Approach:**
+- Centralized theme constants (`client/constants/theme.ts`)
+- Light/dark mode support via system color scheme
+- Primary color: #7C3AED (purple), Secondary: #F97316 (orange)
+- Consistent spacing, typography, and border radius tokens
+
+### Data Model
+
+**Exercise Types:**
+- Strength: weight, sets, reps
+- Cardio: minutes, distance, pace
+
+**Key Entities:**
+- `WorkoutEntry`: A workout logged for a specific date
+- `Exercise`: An exercise in the library (name, body part, type)
+- `StrengthLog`: A strength exercise entry with metrics
+- `CardioLog`: A cardio exercise entry with metrics
+- `UserPreferences`: Display name, avatar, units
+
+### Backend Architecture
+
+**Server:** Express.js with TypeScript
+- Serves static Expo files and landing page
+- REST API structure under `server/`
+- Currently minimal - app is fully local-first
+
+**Data Storage:**
+- All workout data stored locally via AsyncStorage
+- Keys prefixed with `@gyournal/`
+- No database required for core functionality
+
+### Path Aliases
+
+```
+@/ → ./client/
+@shared/ → ./shared/
+```
+
+### Build Configuration
+
+- Babel with module-resolver for path aliases
+- React Native Reanimated plugin for animations
+- Web output configured as "single" bundle
+- Custom build scripts for static deployment
+
+## External Dependencies
+
+### Core Dependencies
+- **Expo SDK 54:** Mobile development platform with managed workflow
+- **React Navigation:** Navigation framework (bottom-tabs, native-stack)
+- **AsyncStorage:** Local persistent storage for workout data
+- **Zod:** Runtime type validation
+
+### UI/UX Libraries
+- **React Native Reanimated:** Animation library
+- **React Native Gesture Handler:** Touch gesture handling
+- **Expo Blur / Glass Effect:** Visual effects
+- **Expo Haptics:** Haptic feedback
+- **Expo Image:** Optimized image component
+
+### Development
+- **tsx:** TypeScript execution for server
+- **ESLint + Prettier:** Code quality and formatting
+        </td>
+      </tr>
+      <tr>
+        <td><a href="https://play.google.com/store/apps/details?id=com.gyournal.app">Gyournal</a></td>
+      </tr>
+    </table>
     <table>
       <tr>
         <th>CSC1015F</th>
@@ -371,3 +491,4 @@
     </table>
   </body>
 </html>
+

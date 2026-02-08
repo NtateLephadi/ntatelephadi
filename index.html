@@ -22,80 +22,12 @@
       </tr>
       <tr>
         <td>
-          <h1>Gyournal</h1>
-          <h2>Overview</h2>
-          <p>
-            Gyournal is a local-first, single-user workout journaling mobile
-            application built with React Native and Expo. The app allows users
-            to log workouts, track exercises by body part, view workout history
-            on a calendar, and monitor fitness statistics and streaks. All data
-            is stored locally on the device - no cloud storage or APIs required.
-          </p>
-          <h2>User Preferences</h2>
-          <p>Preferred communication style: Simple, everyday language.</p>
-          <h2>Recent Changes</h2>
-          <ul>
-            <li><strong>January 2026:</strong> Initial MVP implementation</li>
-            <ul>
-              <li>
-                Calendar view with workout indicators (purple for strength,
-                orange for cardio)
-              </li>
-              <li>
-                Exercise library organized by 7 body parts (Chest, Back, Legs,
-                Arms, Shoulders, Core, Cardio)
-              </li>
-              <li>Stats screen with streak tracking and workout summaries</li>
-              <li>
-                Profile screen with avatar selection and unit preferences
-                (lbs/kg, mi/km)
-              </li>
-              <li>
-                Full CRUD for workout logging with strength and cardio exercise
-                support
-              </li>
-            </ul>
-          </ul>
-          <h2>System Architecture</h2>
-          <h3>Frontend Architecture</h3>
-          <p>
-            <strong>Framework:</strong> React Native with Expo SDK 54<br />
-            Uses the new React Native architecture with React 19<br />
-            Implements React Compiler via Expo experiments<br />
-            File-based module structure under <code>client/</code> directory
-          </p>
-          <h3>Navigation</h3>
-          <p>
-            React Navigation v7<br />
-            Bottom tab navigator with 4 tabs: Calendar, Exercises, Stats,
-            Profile<br />
-            Native stack navigator for modal screens (Log Workout, Workout
-            Detail)<br />
-            Floating action button pattern for workout logging (visible on
-            Calendar and Stats tabs)
-          </p>
-          <h3>State Management</h3>
-          <p>
-            Local component state with React hooks<br />
-            useFocusEffect for refreshing data when screens come into focus<br />
-            AsyncStorage for persistent local data storage
-          </p>
-          <h3>UI Components</h3>
-          <p>
-            Custom themed components (ThemedText, ThemedView, Card, Button)<br />
-            Expo vector icons (Feather icon set)<br />
-            React Native Reanimated for animations<br />
-            Expo Blur for iOS glassmorphism effects<br />
-            Keyboard-aware scroll views for form screens
-          </p>
-          <h3>Styling Approach</h3>
-          <p>
-            Centralized theme constants
-            (<code>client/constants/theme.ts</code>)<br />
-            Light/dark mode support via system color scheme<br />
-            Primary color: #7C3AED (purple), Secondary: #F97316 (orange)<br />
-            Consistent spacing, typography, and border radius tokens
-          </p>
+          Gyournal is a versatile app designed for note-taking and fitness
+          tracking. Users can create and organize notes with features like text
+          formatting, multimedia support, and cloud synchronization for
+          cross-device access. Additionally, Gyournal helps users log past
+          workouts and plan future ones, making it an essential tool for both
+          productivity and fitness enthusiasts.
         </td>
       </tr>
       <tr>

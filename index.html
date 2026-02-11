@@ -15,31 +15,41 @@
       });
     </script>
     <style>
+      /* General body styling */
       body {
         font-family: "Arial", sans-serif;
-        background: linear-gradient(135deg, #0d1b2a, #1b263b);
+        background: linear-gradient(
+          135deg,
+          #1a0033,
+          #2a004d
+        ); /* Deep dark purples */
         color: #fff;
         margin: 0;
         padding: 0;
-        animation: backgroundAnimation 10s infinite alternate;
-        background-image: url("stars-background.jpg"); /* Add a starry background image */
+        overflow: hidden; /* Prevent scrollbars for floating stars */
+      }
+
+      /* Floating stars background */
+      .stars {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: url("stars-background.jpg") repeat;
         background-size: cover;
-        background-attachment: fixed;
-        background-blend-mode: overlay;
+        animation: floatStars 20s linear infinite;
+        z-index: -1; /* Place behind all content */
       }
 
-      @keyframes backgroundAnimation {
-        0% {
-          background: linear-gradient(135deg, #0d1b2a, #1b263b);
+      @keyframes floatStars {
+        from {
+          transform: translateY(0);
         }
-        50% {
-          background: linear-gradient(135deg, #1b263b, #0d1b2a);
-        }
-        100% {
-          background: linear-gradient(135deg, #0d1b2a, #1b263b);
+        to {
+          transform: translateY(-100%);
         }
       }
 
+      /* Table styling */
       table {
         width: 80%;
         margin: 20px auto;
@@ -50,11 +60,11 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         animation: tableFadeIn 2s ease-in-out;
         background: rgba(
-          13,
-          27,
-          42,
+          26,
+          0,
+          51,
           0.8
-        ); /* Deep dark blue with transparency */
+        ); /* Deep dark purple with transparency */
       }
 
       @keyframes tableFadeIn {
@@ -69,7 +79,7 @@
       }
 
       th {
-        background: #3a506b; /* Deep purple */
+        background: #4b0082; /* Indigo */
         color: #fff;
         padding: 15px;
         text-transform: uppercase;
@@ -78,7 +88,7 @@
       }
 
       td {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(75, 0, 130, 0.2); /* Transparent indigo */
         padding: 20px;
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -89,21 +99,26 @@
       }
 
       td:hover {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(
+          75,
+          0,
+          130,
+          0.4
+        ); /* Slightly brighter indigo on hover */
         transform: scale(1.05);
         transition: transform 0.3s ease, background 0.3s ease;
       }
 
       a {
-        color: #4fd1c5; /* Light teal for links */
+        color: #9b59b6; /* Light purple for links */
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s ease;
       }
 
       a:hover {
-        color: #81e6d9; /* Brighter teal on hover */
-        text-shadow: 0 0 10px #81e6d9;
+        color: #d8b4e2; /* Brighter purple on hover */
+        text-shadow: 0 0 10px #d8b4e2;
       }
 
       th,

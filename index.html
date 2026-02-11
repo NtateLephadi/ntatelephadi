@@ -16,101 +16,99 @@
     </script>
     <style>
       body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      animation: backgroundAnimation 10s infinite alternate;
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #0d1b2a, #1b263b);
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        animation: backgroundAnimation 10s infinite alternate;
+        background-image: url("stars-background.jpg"); /* Add a starry background image */
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: overlay;
       }
 
       @keyframes backgroundAnimation {
-      0% {
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
-      }
-      50% {
-        background: linear-gradient(135deg, #2a5298, #1e3c72);
-      }
-      100% {
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
-      }
+        0% {
+          background: linear-gradient(135deg, #0d1b2a, #1b263b);
+        }
+        50% {
+          background: linear-gradient(135deg, #1b263b, #0d1b2a);
+        }
+        100% {
+          background: linear-gradient(135deg, #0d1b2a, #1b263b);
+        }
       }
 
       table {
-      width: 80%;
-      margin: 20px auto;
-      border-collapse: separate;
-      border-spacing: 0;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      animation: tableFadeIn 2s ease-in-out;
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        animation: tableFadeIn 2s ease-in-out;
+        background: rgba(
+          13,
+          27,
+          42,
+          0.8
+        ); /* Deep dark blue with transparency */
       }
 
       @keyframes tableFadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       th {
-      background: #ff6f61;
-      color: #fff;
-      padding: 15px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      border-radius: 15px 15px 0 0;
-      animation: thGlow 3s infinite alternate;
-      }
-
-      @keyframes thGlow {
-      0% {
-        box-shadow: 0 0 10px #ff6f61;
-      }
-      100% {
-        box-shadow: 0 0 20px #ff6f61;
-      }
+        background: #3a506b; /* Deep purple */
+        color: #fff;
+        padding: 15px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 15px 15px 0 0;
       }
 
       td {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      animation: tdHover 1s infinite alternate;
-      border-radius: 0;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       }
 
       td:last-child {
-      border-bottom: none;
+        border-bottom: none;
       }
 
       td:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: scale(1.05);
-      transition: transform 0.3s ease, background 0.3s ease;
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+        transition: transform 0.3s ease, background 0.3s ease;
       }
 
       a {
-      color: #ffcc00;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
+        color: #4fd1c5; /* Light teal for links */
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
       }
 
       a:hover {
-      color: #ff6f61;
-      text-shadow: 0 0 10px #ff6f61;
+        color: #81e6d9; /* Brighter teal on hover */
+        text-shadow: 0 0 10px #81e6d9;
       }
 
       th,
       td {
-      text-align: left;
+        text-align: left;
       }
     </style>
   </head>
@@ -122,9 +120,9 @@
       <tr>
         <td>
           Gyournal is a versatile app designed for note-taking and fitness
-          tracking. Gyournal helps users log past
-          workouts and plan future ones, making it an essential tool for both
-          productivity and fitness enthusiasts.
+          tracking. Gyournal helps users log past workouts and plan future ones,
+          making it an essential tool for both productivity and fitness
+          enthusiasts.
         </td>
       </tr>
       <tr>

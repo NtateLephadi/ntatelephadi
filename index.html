@@ -17,36 +17,12 @@
     <style>
       /* General body styling */
       body {
-        font-family: "Arial", sans-serif;
-        background: linear-gradient(
-          135deg,
-          #1a0033,
-          #2a004d
-        ); /* Deep dark purples */
-        color: #fff;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #1e1e1e; /* VS Code dark theme background */
+        color: #d4d4d4; /* VS Code light gray text */
         margin: 0;
         padding: 0;
-        overflow-x: hidden; /* Allow vertical scrolling but prevent horizontal scrolling */
-      }
-
-      /* Floating stars background */
-      .stars {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: url("stars-background.jpeg") repeat;
-        background-size: cover;
-        animation: floatStars 20s linear infinite;
-        z-index: -1; /* Place behind all content */
-      }
-
-      @keyframes floatStars {
-        from {
-          transform: translateY(0);
-        }
-        to {
-          transform: translateY(-100%);
-        }
+        overflow-x: hidden; /* Prevent horizontal scrolling */
       }
 
       /* Table styling */
@@ -55,43 +31,28 @@
         margin: 20px auto;
         border-collapse: separate;
         border-spacing: 0;
-        border-radius: 15px;
+        border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        animation: tableFadeIn 2s ease-in-out;
-        background: rgba(
-          26,
-          0,
-          51,
-          0.8
-        ); /* Deep dark purple with transparency */
-      }
-
-      @keyframes tableFadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        background: #252526; /* Slightly lighter dark gray */
       }
 
       th {
-        background: #4b0082; /* Indigo */
-        color: #fff;
+        background: #007acc; /* VS Code blue */
+        color: #ffffff; /* White text for contrast */
         padding: 15px;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        border-radius: 15px 15px 0 0;
+        letter-spacing: 1px;
+        border-radius: 8px 8px 0 0;
+        font-weight: bold;
       }
 
       td {
-        background: rgba(75, 0, 130, 0.2); /* Transparent indigo */
-        padding: 20px;
+        background: #1e1e1e; /* Match body background */
+        padding: 15px;
         border: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid #333333; /* Subtle border for separation */
+        color: #d4d4d4; /* Light gray text */
       }
 
       td:last-child {
@@ -99,26 +60,20 @@
       }
 
       td:hover {
-        background: rgba(
-          75,
-          0,
-          130,
-          0.4
-        ); /* Slightly brighter indigo on hover */
-        transform: scale(1.05);
-        transition: transform 0.3s ease, background 0.3s ease;
+        background: #2d2d2d; /* Slightly lighter gray on hover */
+        transition: background 0.2s ease;
       }
 
       a {
-        color: #9b59b6; /* Light purple for links */
+        color: #569cd6; /* VS Code blue for links */
         text-decoration: none;
         font-weight: bold;
-        transition: color 0.3s ease;
+        transition: color 0.2s ease;
       }
 
       a:hover {
-        color: #d8b4e2; /* Brighter purple on hover */
-        text-shadow: 0 0 10px #d8b4e2;
+        color: #9cdcfe; /* Lighter blue on hover */
+        text-shadow: 0 0 5px #9cdcfe;
       }
 
       th,
